@@ -5,7 +5,7 @@ export function range(params/*, hash*/) {
   let current = params[1] || 0;
   let step = params[2] || 0;
   
-  return pos === current || pos === current + step || pos === current - step;
+  return pos <= current + step && pos >= current - step;
 }
 
 export default Ember.Helper.helper(range);
